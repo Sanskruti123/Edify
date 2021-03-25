@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=, initial-scale=1.0">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+	<title>Document</title>
+</head>
+<style>
+	.event {
+
+		width: 50%;
+		margin-left: 25%;
+		margin-top: 10px;
+	}
+
+
+	footer {
+    padding: 10px;
+    font-size: 17px;
+    font-weight: bold;
+    text-align: center;
+    position: relative;
+    height: 80px;
+    margin-top: 25px;
+    background-color: rgb(0, 106, 90);
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: 1px;
+}
+
+footer .navbar.navbar-default {
+    background: transparent;
+    border: none;
+}
+
+footer .navbar-default .navbar-nav>li>a {
+    color: #fff;
+}
+
+.subfooter{
+    padding: 10px 30px;
+    font-size: 17px;
+    position: relative;
+    height: 80px;
+    background-color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: 1px;
+}
+
+.circle {
+    border-radius: 50%;
+    margin: 0.15em;
+    font-size: 24px;
+}
+
+.fa-twitter.circle,
+.fa-facebook.circle,
+.fa-linkedin.circle {
+    background: rgb(0, 106, 90);
+    color: #FFFFFF;
+    padding: 7px 9px;
+}
+
+.footer-link {
+    margin-right: 8% !important;
+}
+
+.email-input {
+    width: 46%;
+    margin-left: 28%;
+    border-color: rgb(0, 106, 90);
+}
+
+
+
+
+
+	.testimonial {
+		margin: 100%;
+		padding: 70px 0;
+	}
+
+	.testimonial-row {
+		width: 80%;
+		margin: auto;
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-start;
+		flex-wrap: wrap;
+	}
+
+	.testimonial-col {
+		/*    flex-basis: 20%;*/
+		/*    padding: 10px 20px;*/
+		margin-bottom: 30px;
+		/*    border-radius: 5px;*/
+		/*    box-shadow: 0 10px 20px 3px grey;*/
+		cursor: pointer;
+		/*    transition: transform .5s;*/
+	}
+
+	.testimonial-col p {
+		font-size: 18px;
+	}
+
+	.user {
+		display: flex;
+		align-items: center;
+		margin: 20px 0;
+	}
+
+	.user img {
+		width: 50%;
+		border-radius: 10px;
+	}
+
+	@media screen and (max-width:770px) {
+		.testimonial-col {
+			flex-basis: 100%;
+		}
+	}
+
+		/*	slider css*/
+	/* Slideshow container */
+	.slideshow-container {
+		position: relative;
+		background: #f1f1f1f1;
+	}
+
+
+	/* Slides */
+	.mySlides {
+		display: none;
+		padding-top: 35px !important;
+		height: 390px;
+		text-align: center;
+	}
+
+	/* Next & previous buttons */
+	.prev,
+	.next {
+		cursor: pointer;
+		position: absolute;
+		top: 50%;
+		width: auto;
+		margin-top: -30px;
+		padding: 16px;
+		color: #888;
+		font-weight: bold;
+		font-size: 20px;
+		border-radius: 0 3px 3px 0;
+		user-select: none;
+	}
+
+	/* Position the "next button" to the right */
+	.next {
+		position: absolute;
+		right: 0;
+		border-radius: 3px 0 0 3px;
+	}
+
+	/* On hover, add a black background color with a little bit see-through */
+	.prev:hover,
+	.next:hover {
+		background-color: rgba(0, 0, 0, 0.8);
+		color: white;
+	}
+
+	/* The dot/bullet/indicator container */
+	.dot-container {
+		text-align: center;
+		padding: 20px;
+	}
+
+	/* The dots/bullets/indicators */
+	.dot {
+		cursor: pointer;
+		height: 15px;
+		width: 15px;
+		margin: 0 2px;
+		background-color: #bbb;
+		border-radius: 50%;
+		display: inline-block;
+		transition: background-color 0.6s ease;
+	}
+
+	/* Add a background color to the active dot/circle */
+	.active,
+	.dot:hover {
+		background-color: #717171;
+	}
+
+	/* Add an italic font style to all quotes */
+	q {
+		font-style: italic;
+	}
+
+	/* Add a blue color to the author */
+	.author {
+		color: cornflowerblue;
+	}
+
+	*{
+		box-sizing: border-box
+	}
+	
+	.clm{
+		float: left;
+		width: 33.33%;
+		padding: 20px;
+	}
+	
+	.clm img{
+		height: 200px;
+		width: 75%;
+	}
+	img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+</style>
+
+<body>
+	
+	     <nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <img src="edify-logo.png" style="height: 95px; width: 241px;margin-right: 40px;">
+    </div>
+    <ul class="nav navbar-nav" >
+      <li class="active"><a href="home.html">Home</a></li>
+      <li> <a href="blog.html">Blog</a></li>
+      <li><a href="#">Services</a></li>
+      <li><a href="event.html">Events</a></li>
+    	<li ><a href="careers.html">Careers</a></li>
+        <li ><a href="about_us.html">About Us</a></li>
+    </ul>
+  </div>
+</nav>
+<div class="row col-md-12" style="padding-left: 5%;padding-right: 5%;">
+        <h2 class="heading1">Who are we?</h2><br>
+<div class="col-md-4">
+        <img src="data:image/jpeg;base64,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" alt="" style=" float: left;width: 400px;height: 400px;">
+	</div>
+	<div class="col-md-8">
+        <p  style="font-size: 18px">
+			Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perferendis voluptate provident vitae, quibusdam officiis, placeat enim accusamus nihil, dolorum hic distinctio praesentium exercitationem nesciunt? Quasi rem quos saepe eum eos.
+			Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perferendis voluptate provident vitae, quibusdam officiis, placeat enim accusamus nihil, dolorum hic distinctio praesentium exercitationem nesciunt? Quasi rem quos saepe eum eos.
+			Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perferendis voluptate provident vitae, quibusdam officiis, placeat enim accusamus nihil, dolorum hic distinctio praesentium exercitationem nesciunt? Quasi rem quos saepe eum eos.
+			Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perferendis voluptate provident vitae, quibusdam officiis, placeat enim accusamus nihil, dolorum hic distinctio praesentium exercitationem nesciunt? Quasi rem quos saepe eum eos.
+			Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perferendis voluptate provident vitae, quibusdam officiis, placeat enim accusamus nihil, dolorum hic distinctio praesentium exercitationem nesciunt? Quasi rem quos saepe eum eos.
+		</p>
+	</div>
+ 	</div>
+	 
+	<div class="title-text">
+			<h1 style="text-align: center;"> Our Ecosystem</h1>
+		</div>
+	<div class="row" style="padding: 2% 5%;">
+		<div class="col-md-4 text-center">
+			<img src="https://www.w3schools.com/bootstrap/ny.jpg" alt="team" style="width: 75%">
+			<h3>Digital Innovation Benchmark</h3>
+			<p style="padding: 20px;text-align: center">In this short documentary,business leaders explain why upskilling for a digital world.</p>
+		</div>
+        <div class="col-md-4 text-center">
+			<img src="https://www.w3schools.com/bootstrap/ny.jpg" alt="team" style="width: 75%">
+			<h3>Data Science in Business</h3>
+			<p style="padding: 20px;text-align: center">In this short documentary,business leaders explain why upskilling for a digital world.</p>
+		</div>
+    <div class="col-md-4 text-center">
+			<img src="https://www.w3schools.com/bootstrap/ny.jpg" alt="team" style="width: 75%">
+		    <h3>Grow and Accelerate your Business</h3>
+		<p style="padding: 20px;text-align: center">In this short documentary,business leaders explain why upskilling for a digital world.</p>
+		
+	</div>
+
+	</div>
+	<h1 style="text-align: center;"> Our Team</h1><br>
+	<img src="business.jpg" style="width:50%";>
+	
+	<!--	<img class="event" src="assets/person.png" alt="">-->
+	<!---------------------------slider start -------------------->
+	<div class="slideshow-container">
+
+		<div class="mySlides">
+			<div id="testimonial" style="margin-left: 18%">
+				<div class="slide">
+					<div class="testimonial-col col-md-3">
+						<div class="user">
+							<img src="" alt="">
+							<div class="user-info">
+
+							</div>
+						</div>
+						<img src="https://www.w3schools.com/bootstrap/ny.jpg" style="width: 100%;height: 100px;" />
+						<p style="padding: 20px;text-align: center">1This is test under description of barber foundation this is test under descrpition of barber foundation <br>
+							<a href="https://www.facebook.com/" class="fa fa-facebook-square" style="color:#4267B2"></a>&nbsp;&nbsp;
+							<a href="https://in.linkedin.com/in/edify-accelerators-498361194" class="fa fa-twitter-square" style="color:#1DA1F2;"></a>&nbsp;&nbsp;
+							<a href="https://www.instagram.com/edify_accelerators/" class="fa fa-pinterest-square" style="color: #BD081C;"></a>
+						</p>
+
+					</div>
+
+
+					<div class="testimonial-col col-md-3">
+						<div class="user">
+							<img src="" alt="">
+							<div class="user-info">
+
+							</div>
+						</div>
+						<img src="https://www.w3schools.com/bootstrap/ny.jpg" style="width: 100%;height: 100px;" />
+						<p style="padding: 20px;text-align: center">2This is test under description of barber foundation this is test under descrpition of barber foundation
+							<br>
+							<a href="https://www.facebook.com/" class="fa fa-facebook-square" style="color:#4267B2"></a>&nbsp;&nbsp;
+							<a href="https://in.linkedin.com/in/edify-accelerators-498361194" class="fa fa-twitter-square" style="color:#1DA1F2;"></a>&nbsp;&nbsp;
+							<a href="https://www.instagram.com/edify_accelerators/" class="fa fa-pinterest-square" style="color: #BD081C;"></a>
+						</p>
+
+					</div>
+
+
+					<div class="testimonial-col col-md-3">
+						<div class="user">
+							<img src="" alt="">
+							<div class="user-info">
+
+							</div>
+						</div>
+						<img src="https://www.w3schools.com/bootstrap/ny.jpg" style="width: 100%;height: 100px;" />
+						<p style="padding: 20px;text-align: center">3This is test under description of barber foundation this is test under descrpition of barber foundation
+							<br>
+							<a href="https://www.facebook.com/" class="fa fa-facebook-square" style="color:#4267B2"></a>&nbsp;&nbsp;
+							<a href="https://in.linkedin.com/in/edify-accelerators-498361194" class="fa fa-twitter-square" style="color:#1DA1F2;"></a>&nbsp;&nbsp;
+							<a href="https://www.instagram.com/edify_accelerators/" class="fa fa-pinterest-square" style="color: #BD081C;"></a>
+						</p>
+					</div>
+
+
+				</div>
+			</div>
+		</div>
+
+		<div class="mySlides">
+			<div id="testimonial" style="margin-left: 18%">
+				<div class="slide">
+					<div class="testimonial-col col-md-3">
+						<div class="user">
+							<img src="" alt="">
+							<div class="user-info">
+
+							</div>
+						</div>
+						<img src="https://www.w3schools.com/bootstrap/ny.jpg" style="width: 100%;height: 100px;" />
+						<p style="padding: 20px;text-align: center">1This is test under description of barber foundation this is test under descrpition of barber foundation <br>
+							<a href="https://www.facebook.com/" class="fa fa-facebook-square" style="color:#4267B2"></a>&nbsp;&nbsp;
+							<a href="https://in.linkedin.com/in/edify-accelerators-498361194" class="fa fa-twitter-square" style="color:#1DA1F2;"></a>&nbsp;&nbsp;
+							<a href="https://www.instagram.com/edify_accelerators/" class="fa fa-pinterest-square" style="color: #BD081C;"></a>
+						</p>
+
+					</div>
+
+
+					<div class="testimonial-col col-md-3">
+						<div class="user">
+							<img src="" alt="">
+							<div class="user-info">
+
+							</div>
+						</div>
+						<img src="https://www.w3schools.com/bootstrap/ny.jpg" style="width: 100%;height: 100px;" />
+						<p style="padding: 20px;text-align: center">2This is test under description of barber foundation this is test under descrpition of barber foundation
+							<br>
+							<a href="https://www.facebook.com/" class="fa fa-facebook-square" style="color:#4267B2"></a>&nbsp;&nbsp;
+							<a href="https://in.linkedin.com/in/edify-accelerators-498361194" class="fa fa-twitter-square" style="color:#1DA1F2;"></a>&nbsp;&nbsp;
+							<a href="https://www.instagram.com/edify_accelerators/" class="fa fa-pinterest-square" style="color: #BD081C;"></a>
+						</p>
+
+					</div>
+
+
+					<div class="testimonial-col col-md-3">
+						<div class="user">
+							<img src="" alt="">
+							<div class="user-info">
+
+							</div>
+						</div>
+						<img src="https://www.w3schools.com/bootstrap/ny.jpg" style="width: 100%;height: 100px;" />
+						<p style="padding: 20px;text-align: center">3This is test under description of barber foundation this is test under descrpition of barber foundation
+							<br>
+							<a href="https://www.facebook.com/" class="fa fa-facebook-square" style="color:#4267B2"></a>&nbsp;&nbsp;
+							<a href="https://in.linkedin.com/in/edify-accelerators-498361194" class="fa fa-twitter-square" style="color:#1DA1F2;"></a>&nbsp;&nbsp;
+							<a href="https://www.instagram.com/edify_accelerators/" class="fa fa-pinterest-square" style="color: #BD081C;"></a>
+						</p>
+					</div>
+
+
+				</div>
+			</div>
+		</div>
+
+		<div class="mySlides">
+			<div id="testimonial" style="margin-left: 18%">
+				<div class="slide">
+					<div class="testimonial-col col-md-3">
+						<div class="user">
+							<img src="" alt="">
+							<div class="user-info">
+
+							</div>
+						</div>
+						<img src="https://www.w3schools.com/bootstrap/ny.jpg" style="width: 100%;height: 100px;" />
+						<p style="padding: 20px;text-align: center">1This is test under description of barber foundation this is test under descrpition of barber foundation <br>
+							<a href="https://www.facebook.com/" class="fa fa-facebook-square" style="color:#4267B2"></a>&nbsp;&nbsp;
+							<a href="https://in.linkedin.com/in/edify-accelerators-498361194" class="fa fa-twitter-square" style="color:#1DA1F2;"></a>&nbsp;&nbsp;
+							<a href="https://www.instagram.com/edify_accelerators/" class="fa fa-pinterest-square" style="color: #BD081C;"></a>
+						</p>
+
+					</div>
+
+
+					<div class="testimonial-col col-md-3">
+						<div class="user">
+							<img src="" alt="">
+							<div class="user-info">
+
+							</div>
+						</div>
+						<img src="https://www.w3schools.com/bootstrap/ny.jpg" style="width: 100%;height: 100px;" />
+						<p style="padding: 20px;text-align: center">2This is test under description of barber foundation this is test under descrpition of barber foundation
+							<br>
+							<a href="https://www.facebook.com/" class="fa fa-facebook-square" style="color:#4267B2"></a>&nbsp;&nbsp;
+							<a href="https://in.linkedin.com/in/edify-accelerators-498361194" class="fa fa-twitter-square" style="color:#1DA1F2;"></a>&nbsp;&nbsp;
+							<a href="https://www.instagram.com/edify_accelerators/" class="fa fa-pinterest-square" style="color: #BD081C;"></a>
+						</p>
+
+					</div>
+
+
+					<div class="testimonial-col col-md-3">
+						<div class="user">
+							<img src="" alt="">
+							<div class="user-info">
+
+							</div>
+						</div>
+						<img src="htztps://www.w3schools.com/bootstrap/ny.jpg" style="width: 100%;height: 100px;" />
+						<p style="padding: 20px;text-align: center">3This is test under description of barber foundation this is test under descrpition of barber foundation
+							<br>
+							<a href="https://www.facebook.com/" class="fa fa-facebook-square" style="color:#4267B2"></a>&nbsp;&nbsp;
+							<a href="https://in.linkedin.com/in/edify-accelerators-498361194" class="fa fa-twitter-square" style="color:#1DA1F2;"></a>&nbsp;&nbsp;
+							<a href="https://www.instagram.com/edify_accelerators/" class="fa fa-pinterest-square" style="color: #BD081C;"></a>
+						</p>
+					</div>
+                    
+					
+
+				</div>
+			</div>
+		</div>
+
+		<a class="prev" onclick="plusSlides(-1)">❮</a>
+		<a class="next" onclick="plusSlides(1)">❯</a>
+
+	</div>
+
+	<div class="dot-container">
+		<span class="dot" onclick="currentSlide(1)"></span>
+		<span class="dot" onclick="currentSlide(2)"></span>
+		<span class="dot" onclick="currentSlide(3)"></span>
+	</div>
+	<!-------------	slider end ------------------>
+
+	<footer id="footer">
+		<span style="position:relative; margin-top: -15px;">How we can help you? </span><br>
+		<span style="position:relative; margin-top: -15px;">Get in touch with us or fing an office closest to you</span>
+	</footer>
+	<div class="subfooter row">
+		<div class="col-md-6">Connect Us
+			<p><i class="fa fa-linkedin circle"></i>
+				<i class="fa fa-twitter circle"></i>
+				<i class="fa fa-facebook circle" style="padding: 7px 12px;"></i>
+			</p>
+		</div>
+		<div class="col-md-6 text-center">Stay in the know with our newsletter
+			<br><input type="email" class="form-control email-input" id="inputEmail1" placeholder="Email...">
+		</div>
+
+	</div>
+	<footer id="footer" style="margin-top: 0 !important;height: auto;font-weight: normal!important;">
+		<nav class="navbar navbar-default">
+			<div class="container-fluid">
+
+				<ul class="nav navbar-nav" style="width: 100%">
+
+					<li class="footer-link"><a href="#">Contact Us</a></li>
+					<li class="footer-link"><a href="#">FAQ's</a></li>
+					<li class="footer-link"><a href="#">Privacy Policy</a></li>
+					<li class="footer-link"><a href="#">Services</a></li>
+					<li class="footer-link"><a href="#">Events</a></li>
+					<li class="footer-link"><a href="#">Careers</a></li>
+					<li><a href="blog.html">Blog</a></li>
+				</ul>
+			</div>
+		</nav>
+		<p style="text-align: right;margin-right: 3%;">
+			@2016-2020 Edify Accelerator
+		</p>
+	</footer>
+	<!--	slider js-->
+	<script>
+		var slideIndex = 1;
+		showSlides(slideIndex);
+
+		function plusSlides(n) {
+			showSlides(slideIndex += n);
+		}
+
+		function currentSlide(n) {
+			showSlides(slideIndex = n);
+		}
+
+		function showSlides(n) {
+			var i;
+			var slides = document.getElementsByClassName("mySlides");
+			var dots = document.getElementsByClassName("dot");
+			if (n > slides.length) {
+				slideIndex = 1
+			}
+			if (n < 1) {
+				slideIndex = slides.length
+			}
+			for (i = 0; i < slides.length; i++) {
+				slides[i].style.display = "none";
+			}
+			for (i = 0; i < dots.length; i++) {
+				dots[i].className = dots[i].className.replace(" active", "");
+			}
+			slides[slideIndex - 1].style.display = "block";
+			dots[slideIndex - 1].className += " active";
+		}
+
+	</script>
+	</div>
+</body>
+
+</html>
+
+
+
+
